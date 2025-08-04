@@ -321,11 +321,66 @@ export default {
   .footer-buttons {
     flex-direction: column;
     gap: 15px;
+    align-items: center; /* Center all content */
+  }
+
+  .footer-left-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .user-info-footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+  }
+
+  /* Keep avatar and nickname together */
+  .user-info-footer .user-avatar-footer,
+  .user-info-footer .user-nickname-footer {
+    align-self: center;
+  }
+
+  /* Stack status and buttons below */
+  .user-info-footer .user-status-footer {
+    margin-bottom: 10px;
+  }
+
+  /* Make buttons stack vertically in mobile */
+  .user-info-footer .btn-footer,
+  .user-info-footer .btn-premium-footer {
+    width: 100%;
+    max-width: 200px;
+    margin: 5px 0;
   }
 
   .footer-right-section {
-    flex-wrap: wrap; /* Allow buttons to wrap */
-    justify-content: center; /* Center buttons when wrapped */
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+  }
+
+  .footer-right-section .btn-footer {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+  .user-info-footer {
+    gap: 5px;
+  }
+
+  .btn-footer,
+  .btn-premium-footer {
+    font-size: 0.9em !important;
+    padding: 8px 12px !important;
   }
 }
 </style>
