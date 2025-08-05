@@ -201,17 +201,24 @@ export default {
   justify-content: space-between; /* Distribute items to ends */
   align-items: center; /* Center items vertically */
   padding: 0 20px; /* Add padding from edges */
+  min-height: 60px;
+  overflow: hidden;
 }
 
 .footer-left-section {
   display: flex;
   align-items: center;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .footer-right-section {
   display: flex;
   align-items: center;
   gap: 20px; /* Space between buttons */
+  flex-shrink: 0;
+  flex-wrap: wrap;
 }
 
 .user-info-footer {
@@ -221,6 +228,8 @@ export default {
   color: var(--noir-retro-off-white);
   font-family: 'Roboto', sans-serif;
   font-size: 1.1em;
+  flex-wrap: wrap;
+  min-width: 0;
 }
 
 .user-avatar-footer {
@@ -302,7 +311,110 @@ export default {
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
+/* Extra large screens */
+@media (min-width: 1200px) {
+  .footer-buttons {
+    padding: 0 30px;
+    gap: 30px;
+  }
+  
+  .footer-right-section {
+    gap: 25px;
+  }
+  
+  .btn-footer,
+  .btn-premium-footer {
+    font-size: 1em;
+    padding: 8px 16px;
+  }
+}
+
+/* Large tablets and small desktops - Layout en dos líneas */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .footer-buttons {
+    flex-direction: column;
+    gap: 12px;
+    padding: 15px;
+    align-items: center;
+  }
+  
+  .footer-left-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    order: 1;
+  }
+  
+  .user-info-footer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  
+  .footer-right-section {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    order: 2;
+  }
+  
+  .btn-footer,
+  .btn-premium-footer {
+    font-size: 0.9em;
+    padding: 6px 12px;
+    white-space: nowrap;
+  }
+}
+
+/* Medium tablets - Layout en dos líneas */
+@media (max-width: 768px) and (min-width: 577px) {
+  .footer-buttons {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px 10px;
+    align-items: center;
+  }
+  
+  .footer-left-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    order: 1;
+  }
+  
+  .user-info-footer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  
+  .footer-right-section {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    order: 2;
+    margin-top: 10px;
+  }
+  
+  .btn-footer,
+  .btn-premium-footer {
+    font-size: 0.85em;
+    padding: 8px 12px;
+    white-space: nowrap;
+    min-width: 100px;
+  }
+}
+
+/* Small tablets and large phones */
+@media (max-width: 576px) {
   .game-board-container {
     width: 98%;
     border-radius: 8px;
@@ -321,7 +433,7 @@ export default {
   .footer-buttons {
     flex-direction: column;
     gap: 15px;
-    align-items: center; /* Center all content */
+    align-items: center;
   }
 
   .footer-left-section {
