@@ -84,8 +84,8 @@ export default {
 }
 .cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
   margin-top: 20px;
 }
 .card {
@@ -104,7 +104,7 @@ export default {
 
 .card-image {
   width: 100%;
-  height: 150px;
+  height: 200px;
   object-fit: cover;
   border-radius: 0;
   margin-bottom: 0;
@@ -116,6 +116,7 @@ export default {
   color: var(--color-text-dark);
   margin: 10px 10px 5px 10px;
   text-align: center; /* Centrar título */
+  font-size: 1.5em;
 }
 
 .card p {
@@ -126,23 +127,24 @@ export default {
   margin: 0 10px 10px 10px;
   text-align: center; /* Centrar descripción */
   flex-grow: 1;
+  font-size: 1.2em;
 }
 
-/* Mobile Responsive Styles - Diseño tipo carta */
+/* Mobile Responsive Styles - Diseño tipo carta más grande */
 @media (max-width: 768px) {
   .action-cards-container {
     padding: 0 10px;
   }
   
   .cards-grid {
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)) !important;
-    gap: 15px !important;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important;
+    gap: 20px !important;
     justify-content: center;
   }
   
   .card {
-    min-height: 240px !important;
-    max-width: 180px;
+    min-height: 320px !important;
+    max-width: 240px;
     margin: 0 auto;
     aspect-ratio: 2.5/3.5; /* Proporción de carta real */
     border-radius: 15px !important;
@@ -150,18 +152,18 @@ export default {
   }
   
   .card-image {
-    height: 80px !important;
-    width: 80px !important;
+    height: 120px !important;
+    width: 120px !important;
     border-radius: 50% !important; /* Imagen circular como avatar */
     object-fit: cover !important;
-    margin: 15px auto 10px auto !important;
+    margin: 20px auto 15px auto !important;
     display: block !important;
     border: 3px solid var(--color-button-border) !important;
   }
   
   .card h4 {
-    font-size: 1em !important;
-    margin: 5px 8px !important;
+    font-size: 1.4em !important;
+    margin: 8px 12px !important;
     text-align: center !important;
     line-height: 1.2 !important;
     min-height: 2.4em; /* Altura fija para consistencia */
@@ -171,13 +173,13 @@ export default {
   }
   
   .card p {
-    font-size: 0.8em !important;
-    line-height: 1.3 !important;
-    margin: 5px 8px 15px 8px !important;
+    font-size: 1.1em !important;
+    line-height: 1.4 !important;
+    margin: 8px 12px 20px 12px !important;
     text-align: center !important;
     flex-grow: 1;
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
@@ -185,50 +187,50 @@ export default {
 
 @media (max-width: 480px) {
   .cards-grid {
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)) !important;
-    gap: 12px !important;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+    gap: 15px !important;
   }
   
   .card {
-    min-height: 220px !important;
-    max-width: 160px;
+    min-height: 280px !important;
+    max-width: 220px;
     aspect-ratio: 2.5/3.5;
   }
   
   .card-image {
-    height: 70px !important;
-    width: 70px !important;
-    margin: 12px auto 8px auto !important;
+    height: 100px !important;
+    width: 100px !important;
+    margin: 18px auto 12px auto !important;
   }
   
   .card h4 {
-    font-size: 0.9em !important;
-    margin: 4px 6px !important;
+    font-size: 1.3em !important;
+    margin: 6px 10px !important;
   }
   
   .card p {
-    font-size: 0.75em !important;
-    margin: 4px 6px 12px 6px !important;
-    -webkit-line-clamp: 2;
+    font-size: 1.1em !important;
+    margin: 6px 10px 15px 10px !important;
+    -webkit-line-clamp: 3;
   }
 }
 
 /* Para pantallas muy pequeñas */
 @media (max-width: 360px) {
   .cards-grid {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)) !important;
-    gap: 10px !important;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)) !important;
+    gap: 12px !important;
   }
   
   .card {
-    min-height: 200px !important;
-    max-width: 140px;
+    min-height: 260px !important;
+    max-width: 200px;
   }
   
   .card-image {
-    height: 60px !important;
-    width: 60px !important;
-    margin: 10px auto 6px auto !important;
+    height: 90px !important;
+    width: 90px !important;
+    margin: 15px auto 10px auto !important;
   }
 }
 .card-fade-slide-enter-active,
@@ -260,12 +262,12 @@ export default {
   }
   
   .card h4 {
-    font-size: 1em !important;
+    font-size: 1.2em !important;
     margin-bottom: 6px !important;
   }
   
   .card p {
-    font-size: 0.85em !important;
+    font-size: 1.0em !important;
     line-height: 1.3 !important;
   }
   

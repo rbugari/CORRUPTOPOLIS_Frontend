@@ -71,6 +71,12 @@
     <div class="card-play-area" v-if="currentScreen === 'game' && selectedCard && gameConfig">
       <PlayCardView :card="selectedCard" @playCard="handlePlayCard" @cancel="cancelPlayCard" :gameConfig="gameConfig" :generatedPlan="generatedDevPlan" />
     </div>
+    <!-- Welcome Modal -->
+    <WelcomeModal
+      v-if="showWelcomeModal"
+      @close-welcome="closeWelcomeModal"
+    />
+
     <ScandalEvent v-if="currentScreen === 'scandal' && showScandalEvent" :headline="scandalHeadline" :user-info="gameState.userInfo" @scandal-resolved="handleScandalResolved" />
     <div v-if="currentScreen === 'gameOver' && showGameOver" class="monetization-prompt game-over">
       <h3>{{ $t('game.game_over_title') }}</h3>
@@ -160,6 +166,7 @@ import EvaluationView from '../components/EvaluationView.vue';
 import PlayCardView from '../components/PlayCardView.vue';
 import ScandalEvent from '../components/ScandalEvent.vue';
 import CorruptionWheel from '../components/CorruptionWheel.vue';
+import WelcomeModal from '../components/WelcomeModal.vue';
 import api from '../api';
 import eventBus from '../eventBus';
 import GameWon from '../components/GameWon.vue';
@@ -173,6 +180,7 @@ export default {
     ScandalEvent,
     CorruptionWheel,
     GameWon,
+    WelcomeModal,
   },
   data() {
     return {
@@ -200,6 +208,7 @@ export default {
       devPlanQuality: 'bueno',
       generatedDevPlan: '',
       devCalculationDetails: {},
+      showWelcomeModal: false,
     };
   },
   methods: {
@@ -458,6 +467,9 @@ export default {
       document.documentElement.className = ''; // Clear existing classes from html
       document.documentElement.classList.add(`theme-${themeName}`);
       localStorage.setItem('theme', themeName);
+    },
+    closeWelcomeModal() {
+      this.showWelcomeModal = false;
     }
   },
   async mounted() {
@@ -468,6 +480,9 @@ export default {
       await this.loadAdConfig(); // Nueva línea
     }
     eventBus.on('gamestate-updated-by-ad', this.handleGameStateUpdateFromAd);
+    
+    // Mostrar modal de bienvenida cada vez que se entra al juego
+    this.showWelcomeModal = true;
   },
   beforeUnmount() {
     eventBus.off('gamestate-updated-by-ad', this.handleGameStateUpdateFromAd);

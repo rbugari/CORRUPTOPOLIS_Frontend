@@ -46,6 +46,22 @@
     "profile_updated_successfully": "Profile updated successfully!",
     "error_saving_profile": "Error saving profile."
   },
+  "welcome_modal": {
+    "title": "Welcome to Corruptópolis!",
+    "how_to_play_title": "How to Play?",
+    "step_1_title": "Select Corruption Type",
+    "step_1_description": "Press the wheel button to choose what type of corruption you will investigate in this round.",
+    "step_2_title": "Choose your Action Card",
+    "step_2_description": "Select an action card that will help you investigate the chosen corruption case.",
+    "step_3_title": "Build your Case",
+    "step_3_description": "Use the exposed tags to craft your strategy and build a solid case against corruption.",
+    "step_4_title": "Rate your Investigation",
+    "step_4_description": "Evaluate how effective your investigation was and receive points based on your performance.",
+    "step_5_title": "Advance to Next Round",
+    "step_5_description": "Once the evaluation is complete, continue to the next level with new challenges.",
+    "tip": "💡 Tip: Read each card carefully and think strategically about how to combine actions to maximize your effectiveness.",
+    "start_playing": "Start Playing!"
+  },
   "verify_email": {
     "description_prefix": "A verification code has been sent to",
     "description_suffix": "Please enter the code below to activate your account. If you don't find it, check your spam folder.",

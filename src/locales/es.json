@@ -46,6 +46,22 @@
     "profile_updated_successfully": "Perfil actualizado exitosamente!",
     "error_saving_profile": "Error al guardar el perfil."
   },
+  "welcome_modal": {
+    "title": "¡Bienvenido a Corruptópolis!",
+    "how_to_play_title": "¿Cómo Jugar?",
+    "step_1_title": "Selecciona Tipo de Corrupción",
+    "step_1_description": "Presiona el botón de la rueda para elegir qué tipo de corrupción vas a investigar en esta ronda.",
+    "step_2_title": "Elige tu Carta de Acción",
+    "step_2_description": "Selecciona una carta de acción que te ayude a investigar el caso de corrupción elegido.",
+    "step_3_title": "Construye tu Caso",
+    "step_3_description": "Utiliza los tags expuestos para armar tu estrategia y construir un caso sólido contra la corrupción.",
+    "step_4_title": "Califica tu Investigación",
+    "step_4_description": "Evalúa qué tan efectiva fue tu investigación y recibe puntos basados en tu desempeño.",
+    "step_5_title": "Avanza a la Siguiente Ronda",
+    "step_5_description": "Una vez completada la evaluación, continúa al siguiente nivel con nuevos desafíos.",
+    "tip": "💡 Consejo: Lee cuidadosamente cada carta y piensa estratégicamente sobre cómo combinar las acciones para maximizar tu efectividad.",
+    "start_playing": "¡Comenzar a Jugar!"
+  },
   "verify_email": {
     "description_prefix": "Se ha enviado un código de verificación a",
     "description_suffix": "Por favor, introduce el código a continuación para activar tu cuenta. Si no lo encuentras, revisa tu carpeta de spam.",
